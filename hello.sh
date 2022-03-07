@@ -9,4 +9,3 @@ echo "Hoje é dia `date +%d_%m_%y`"
 echo ""
 echo "Obrigado!"
 echo "#########"
-echo  FOLHA
