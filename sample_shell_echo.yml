@@ -1,0 +1,8 @@
+
+- name: "Executando 1a Instrucao"
+  hosts: all
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: "Executando echo para o arquivo"
+      ansible.builtin.shell: "echo Louco >> /tmp/teste.txt"

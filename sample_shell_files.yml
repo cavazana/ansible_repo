@@ -1,0 +1,7 @@
+- name: "Run task on all hosts"
+  hosts: all
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: create a text file in /tmp/ansible with the /bin/sh shell
+      shell: echo "Hello, World parte 2!" >> /tmp/ansible/test_file.txt

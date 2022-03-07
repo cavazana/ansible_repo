@@ -1,0 +1,12 @@
+
+- name: "Cleaning rpm - Linux Servers"
+  hosts: all
+  become: yes
+  gather_facts: no
+  #vars:
+          #    SERVER: hogpatpc01
+          # RPMPKG: /home/igorc/Downloads/falcon-sensor-6.35.0-13207.el7.x86_64.rpm
+  tasks:
+    - name: "Remove RPM package from server"
+      ansible.builtin.command: "rm -rf /tmp/falcon-sensor-6.35.0-13207.suse12.x86_64.rpm"
+
