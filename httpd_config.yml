@@ -1,0 +1,16 @@
+---
+ - name: manage httpd.conf
+   hosts: localhost 
+   become: true
+   tasks:
+    - name: Copy Apache configuration file
+      copy:
+        src: httpd.conf
+        dest: /etc/httpd/configuration
+      notify:
+        - restart_apache
+    handlers:
+      - name: restart_apache
+        service:
+          name: httpd
+          state: restarted
